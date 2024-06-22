@@ -42,6 +42,7 @@ function MainPage() {
       const res = await getListUsers(token ?? "");
       if (res.status === 200 && res.data) {
         setStateListUsers(res.data);
+        dispatch(setNotificationState("fetching users success"));
       } else if (res.status === 401) {
         dispatch(setNotificationState("Authentication failed"));
       } else {
@@ -107,6 +108,7 @@ function MainPage() {
     dispatch(setNotificationState("Logging Out..."));
 
     setTimeout(() => {
+      dispatch(setNotificationState(""));
       localStorage.removeItem("token");
       router.push("/login");
     }, 2000);
