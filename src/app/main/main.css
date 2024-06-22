@@ -1,0 +1,72 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  color: black;
+
+  .header-section {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 64px;
+    .status-section {
+      display: flex;
+      width: 360px;
+      height: 160px;
+      justify-content: center;
+      align-items: center;
+    }
+    .action-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .body-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 64px;
+    .list-section {
+      width: 580px;
+      height: 500px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    .update-section {
+      display: flex;
+      width: 580px;
+      height: 500px;
+      padding: 32px;
+      background-color: white;
+      flex-direction: column;
+      gap: 32px;
+
+      .row-action {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 140px;
+      }
+    }
+  }
+
+  .row-notification {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid grey;
+}
